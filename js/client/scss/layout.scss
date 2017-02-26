@@ -1,0 +1,60 @@
+$borderColor: #e4e4e4;
+
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	background: lightblue;
+	z-index: 100;
+	top: 0;
+
+	.title {
+	    color: white;
+	    padding: 14px;
+	    font-size: 20px;
+	    float: left;
+	}
+
+	.repo-add {
+	    padding: 12px;
+	    float: right;
+	}
+
+	.input {
+		padding: 7px;
+	    width: 200px;
+	    border: 0;
+	}
+}
+
+.repos {
+	top: 60px;
+	position: relative;
+
+}
+
+.card {
+	margin: 20px;
+    padding: 20px;
+    border: 1px solid $borderColor;
+
+    .repo {
+    	overflow: auto;
+    }
+
+    .delete-section {
+    	float: right;
+	    cursor: pointer;
+	    padding: 5px;
+    }
+
+    .repo-name {
+    	float: left;
+    }
+}
