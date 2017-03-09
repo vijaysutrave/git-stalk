@@ -1,4 +1,5 @@
 const path = require('path')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -20,6 +21,9 @@ module.exports = {
     reasons: true,
     chunks: true
   },
+  plugins: [
+
+  ],
   module: {
     rules: [
       {

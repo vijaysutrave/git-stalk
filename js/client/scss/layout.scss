@@ -1,60 +1,167 @@
 $borderColor: #e4e4e4;
-
+$starYellow: #f3d900;
+$warningRed: #e04f4f;
+$forkBrown: #b34d00;
+$colorBody: #24292e;
+$colorEmpty: #a7a7a7;
+$colorWhite: #fff;
 
 body {
 	margin: 0;
 	padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: $colorBody;
 }
 
 .header {
 	position: fixed;
 	width: 100%;
 	height: 50px;
-	background: lightblue;
+	background: $colorBody;
 	z-index: 100;
 	top: 0;
 
 	.title {
-	    color: white;
-	    padding: 14px;
+	    color: $colorWhite;
+	    padding: 14px 14px 14px 0;
 	    font-size: 20px;
 	    float: left;
 	}
 
 	.repo-add {
-	    padding: 12px;
-	    float: right;
+        padding: 12px 9px;
+        float: right;
+        width: 50%;
+        max-width: 250px;
 	}
 
 	.input {
 		padding: 7px;
 	    width: 200px;
 	    border: 0;
+        background-color: inherit;
+        border-bottom: 1px solid $colorWhite;
+        color: $colorWhite;
+        float: right;
+        width: 100%;
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
 	}
+
+    .logo {
+        float: left;
+        padding: 12px 8px;
+    }
 }
 
 .repos {
 	top: 60px;
 	position: relative;
 
+    .empty {
+
+        &-state {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        &-text {
+            margin: 20px 0;
+            color: $colorEmpty;
+        }
+
+
+    } 
+
 }
 
 .card {
 	margin: 20px;
-    padding: 20px;
-    border: 1px solid $borderColor;
+    padding: 20px 0;
+    border-bottom: 1px solid $borderColor;
+    overflow: auto;
+    position: relative;
+
+    /*svg {
+    	position: relative;
+    	top: -1px;
+    }*/
 
     .repo {
     	overflow: auto;
     }
 
+    .repo-info {
+        overflow: auto;
+        margin: 8px 0;
+    }
+
+    .info-item {
+    	float: left;
+    	margin-right: 25px;
+    }
+
+    .stars {
+    	svg {
+    		color: $starYellow;
+    	}
+    }
+
+    .issues {
+    	svg {
+    		color: $warningRed;
+    	}
+    }
+
+    .forks {
+    	svg {
+    		color: $forkBrown;
+    	}
+    }
+
     .delete-section {
-    	float: right;
-	    cursor: pointer;
-	    padding: 5px;
+        position: absolute;
+        right: 0;
+        width: 100%;
+
+        .delete-item {
+            float: right;
+            cursor: pointer;
+        }
+
+        .confirm-group {
+            background: white;
+            text-align: right;
+        }
+    }
+
+    .btn {
+        padding: 5px;
+        margin: 5px;
+        background: none;
+        border-width: 1px;
+        box-shadow: none;
+        text-shadow: none;
+        border-color: #24292e;
+        cursor: pointer;
+
+        &.success {
+            color: green;
+        }
+
+        &.warning {
+            color: red;
+        }
     }
 
     .repo-name {
-    	float: left;
+        float: left;
+        max-width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

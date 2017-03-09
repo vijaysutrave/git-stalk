@@ -1,0 +1,25 @@
+{
+  "short_name": "Git-Stalk",
+  "name": "Stalk developer repositories on Github",
+  "icons": [
+    {
+      "src": "launcher-icon-1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "launcher-icon-2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "launcher-icon-4x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#24292e",
+  "display": "standalone",
+  "theme_color": "#24292e"
+}

@@ -1,8 +1,16 @@
 export default (state = { repos: {} }, action) => {
   switch (action.type) {
     case 'ADD_REPO':
-    	  const newRepos = Object.assign({}, state.repos, {[action.data.full_name]: action.data})
-	      
+    	  const newRepos = Object.assign({}, state.repos, 
+              {
+                [action.data.full_name]: {
+                                            stars: action.data.stargazers_count, 
+                                            name: action.data.full_name,
+                                            forks: action.data.forks_count,
+                                            issues: action.data.open_issues_count
+                                          }
+              }
+              )
 	      return Object.assign({}, this.state, {
 	      	repos: newRepos
 	      });
@@ -14,6 +22,9 @@ export default (state = { repos: {} }, action) => {
       return Object.assign({}, this.state, {
         repos: updatedRepo
       });
+
+    case 'UPDATE_DATA': 
+      return Object.assign({}, this.state, {repos: action.data});
 
     default:
           return state;
