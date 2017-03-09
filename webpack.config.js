@@ -1,6 +1,7 @@
 const path = require('path')
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-var webpack = require('webpack');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const webpack = require('webpack');
 
 
 module.exports = {
@@ -24,7 +25,7 @@ module.exports = {
     chunks: true
   },
   plugins: [
-     new webpack.DefinePlugin({ // <-- key to reducing React's size
+     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
@@ -33,10 +34,10 @@ module.exports = {
         filename: "style.css",
         allChunks: true
     }),
-    new webpack.optimize.DedupePlugin(), //dedupe similar code 
-    new webpack.optimize.UglifyJsPlugin(), //minify everything
-    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks
-   
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(), 
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new OptimizeCSSAssetsPlugin()
   ],
   module: {
     rules: [

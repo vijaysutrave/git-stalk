@@ -2,6 +2,7 @@ import React from 'react'
 import Card from './Card'
 import { connector } from './store';
 import '../client/scss/layout.scss';
+import '../client/scss/libs.css';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import repoActions from './actions';
@@ -21,7 +22,11 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    this.props.repoActions.updateLatestData(Object.keys(this.props.repos))
+    const getLastSyncTime = localStorage.getItem('lastSync');
+    if(getLastSyncTime && Math.floor(new Date().getTime() / 1000) - getLastSyncTime > 300) {  
+      this.props.repoActions.updateLatestData(Object.keys(this.props.repos));
+      localStorage.setItem('lastSync', Math.floor(new Date().getTime() / 1000));
+    }
   }
 
   handleSubmit(event) {
@@ -57,17 +62,25 @@ class Header extends React.Component {
       )
   }
 
+  renderInput() {
+    return (
+       <div className="repo-add">
+          <form onSubmit={this.handleSubmit.bind(this)} >
+            <input type="text" placeholder="Add a repo"  className="input" onChange={this.handleOnchange.bind(this)} /> 
+          </form>
+        </div>
+      )
+  }
+
   render() {
     return (
       <div className="wrapper">
         <header className='header'>
           <div className="logo"><img src="logo.svg" width="30" /></div>
           <div className="title">Git-Stalk</div>
-          <div className="repo-add">
-            <form onSubmit={this.handleSubmit.bind(this)} >
-              <input type="text" placeholder="Add a repo"  className="input" onChange={this.handleOnchange.bind(this)} /> 
-            </form>
-          </div>
+          {
+            Object.keys(this.props.repos).length < 5 && this.renderInput() 
+          }
         </header>
          <ToastContainer ref="container"
                         toastMessageFactory={ToastMessageFactory}
