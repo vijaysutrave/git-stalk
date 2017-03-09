@@ -26,6 +26,8 @@ class Header extends React.Component {
     if(getLastSyncTime && Math.floor(new Date().getTime() / 1000) - getLastSyncTime > 300) {  
       this.props.repoActions.updateLatestData(Object.keys(this.props.repos));
       localStorage.setItem('lastSync', Math.floor(new Date().getTime() / 1000));
+    } else if(!getLastSyncTime) {
+        localStorage.setItem('lastSync', Math.floor(new Date().getTime() / 1000));
     }
   }
 
