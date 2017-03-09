@@ -55,6 +55,7 @@
     "eslint-plugin-promise": "2.0.1",
     "eslint-plugin-react": "6.3.0",
     "eslint-plugin-standard": "2.0.0",
+    "extract-text-webpack-plugin": "^2.1.0",
     "jest": "15.1.1",
     "jsdom": "9.5.0",
     "json-loader": "0.5.4",

@@ -1,5 +1,7 @@
 const path = require('path')
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack = require('webpack');
+
 
 module.exports = {
   context: __dirname,
@@ -22,7 +24,19 @@ module.exports = {
     chunks: true
   },
   plugins: [
-
+     new webpack.DefinePlugin({ // <-- key to reducing React's size
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+   new ExtractTextPlugin({
+        filename: "style.css",
+        allChunks: true
+    }),
+    new webpack.optimize.DedupePlugin(), //dedupe similar code 
+    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks
+   
   ],
   module: {
     rules: [
@@ -36,7 +50,7 @@ module.exports = {
       },
       {
         test: /\.scss|.css$/,
-        loader: "style!raw!postcss!sass"
+        loader: ExtractTextPlugin.extract({fallback: 'style-loader', use:'raw!postcss!sass'})
       }
     ]
   }

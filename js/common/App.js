@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { connect, Provider } from 'react-redux'
+import { Provider } from 'react-redux'
 import Layout from './Layout'
 import store from './store'
 
