@@ -1,7 +1,7 @@
 var cacheName = 'git-stalk-1';
 
 var filesToCache = [
-	'index.html',
+	'/git-stalk',
 	'public/bundle.js',
 	'empty.svg',
 	'logo.svg'
