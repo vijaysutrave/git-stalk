@@ -1,12 +1,5 @@
 const Layout = require('./Layout')
 
-if (typeof(require.ensure) !== "function") {
-  require.ensure = function(modules, callback) {
-    callback(require);
-  }
-}
-
-
 const Routes = {
   component: Layout,
   path: '/',
@@ -21,4 +14,4 @@ const Routes = {
   ]
 }
 
-module.exports = Routes;
+module.exports = Routes

@@ -1,3 +1,8 @@
 {
-  "extends": ["standard", "standard-react"]
+  "extends": ["standard", "standard-react"],
+  "rules": {
+  	"no-class-assign": "off",
+  	"handle-callback-err
+  	": "off"
+  }
 }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint js/**/*.js webpack.config.js",
-    "build": "webpack",
+    "build": "webpack -p",
     "dev": "webpack-dev-server --port=5090",
     "watch": "npm run build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
