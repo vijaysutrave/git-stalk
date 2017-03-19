@@ -9,8 +9,8 @@ $colorWhite: #fff;
 body {
 	margin: 0;
 	padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: $colorBody;
+  font-family: 'Roboto', sans-serif;
+  color: $colorBody;
 }
 
 .header {
@@ -22,148 +22,146 @@ body {
 	top: 0;
 
 	.title {
-	    color: $colorWhite;
-	    padding: 14px 14px 14px 0;
-	    font-size: 20px;
-	    float: left;
-	}
+    color: $colorWhite;
+    padding: 14px 14px 14px 0;
+    font-size: 20px;
+    float: left;
+  }
 
-	.repo-add {
-        padding: 8px;
-        float: right;
-        width: 50%;
-        max-width: 250px;
-	}
+  .repo-add {
+    padding: 8px;
+    float: right;
+    width: 50%;
+    max-width: 250px;
+  }
 
-	.input {
-		padding: 7px;
-	    width: 200px;
-	    border: 0;
-        background-color: inherit;
-        border-bottom: 1px solid $colorWhite;
-        color: $colorWhite;
-        float: right;
-        width: 100%;
-        font-size: 14px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+  .input {
+    padding: 7px;
+    width: 200px;
+    border: 0;
+    background-color: inherit;
+    border-bottom: 1px solid $colorWhite;
+    color: $colorWhite;
+    float: right;
+    width: 100%;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius:0;
+    outline: none;
 
-        &:focus,
-        &:active {
-            outline: none;
-        }
-	}
-
-    .logo {
-        float: left;
-        padding: 12px 8px;
+    &:focus,
+    &:active {
+      outline: none;
     }
+  }
+
+  .logo {
+    float: left;
+    padding: 12px 8px;
+  }
 }
 
 .repos {
 	top: 60px;
 	position: relative;
 
-    .empty {
+  .empty {
+    &-state {
+      text-align: center;
+      margin: 50px 0;
+    }
 
-        &-state {
-            text-align: center;
-            margin: 50px 0;
-        }
-
-        &-text {
-            margin: 20px 0;
-            color: $colorEmpty;
-            padding: 20px;
-        }
-
-
-    } 
-
+    &-text {
+      margin: 20px 0;
+      color: $colorEmpty;
+      padding: 20px;
+    }
+  } 
 }
 
 .card {
 	margin: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid $borderColor;
+  padding: 20px 0;
+  border-bottom: 1px solid $borderColor;
+  overflow: auto;
+  position: relative;
+
+  svg {
+    margin-bottom: 1px;
+  }
+
+  .repo {
+   overflow: auto;
+  }
+
+ .repo-info {
     overflow: auto;
-    position: relative;
+    margin: 8px 0;
+  }
 
+  .info-item {
+    float: left;
+    margin-right: 25px;
+  }
+
+  .stars {
     svg {
-        margin-bottom: 1px;
+      color: $starYellow;
+    }
+  }
+
+  .issues {
+    svg {
+      color: $warningRed;
+    }
+  }
+
+  .forks {
+    svg {
+      color: $forkBrown;
+    }
+  }
+
+  .delete-section {
+    .delete-item {
+      float: right;
+      cursor: pointer;
     }
 
-    .repo {
-    	overflow: auto;
-    }
+  .confirm-group {
+    background: white;
+    text-align: right;
+    width: 100%;
+    position: absolute;
+  }
+}
 
-    .repo-info {
-        overflow: auto;
-        margin: 8px 0;
-    }
+.btn {
+  padding: 5px;
+  margin: 5px;
+  background: none;
+  border-width: 1px;
+  box-shadow: none;
+  text-shadow: none;
+  border-color: #24292e;
+  cursor: pointer;
 
-    .info-item {
-    	float: left;
-    	margin-right: 25px;
-    }
+  &.success {
+    color: green;
+  }
 
-    .stars {
-    	svg {
-    		color: $starYellow;
-    	}
-    }
+  &.warning {
+    color: red;
+  }
+}
 
-    .issues {
-    	svg {
-    		color: $warningRed;
-    	}
-    }
-
-    .forks {
-    	svg {
-    		color: $forkBrown;
-    	}
-    }
-
-    .delete-section {
-        .delete-item {
-            float: right;
-            cursor: pointer;
-        }
-
-        .confirm-group {
-            background: white;
-            text-align: right;
-            width: 100%;
-            position: absolute;
-        }
-    }
-
-    .btn {
-        padding: 5px;
-        margin: 5px;
-        background: none;
-        border-width: 1px;
-        box-shadow: none;
-        text-shadow: none;
-        border-color: #24292e;
-        cursor: pointer;
-
-        &.success {
-            color: green;
-        }
-
-        &.warning {
-            color: red;
-        }
-    }
-
-    .repo-name {
-        float: left;
-        max-width: 90%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.repo-name {
+  float: left;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 }
