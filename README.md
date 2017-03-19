@@ -14,6 +14,9 @@ public repository.
 Git-Stalk is tested with [Lighthouse](https://github.com/GoogleChrome/lighthouse) to make it a [fully progressive web app](http://vijaysutrave.com/git-stalk-results.png).
 It uses Service Workers for a offline-first experience and is built with React / Redux. 
 
+## Screenshots
+<img src="http://vijaysutrave.com/git-stalk1.jpeg" height="300" width="auto" style="margin-right: 30px; display: inline-block;"/>&nbsp;&nbsp;<img src="http://vijaysutrave.com/git-stalk2.jpeg" height="300" width="auto" />
+</div>
 
 ## Like it?
 :star: this repo
