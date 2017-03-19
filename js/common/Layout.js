@@ -1,6 +1,6 @@
 /* global localStorage */
 
-import React from 'react'
+import React, {PropTypes} from 'react'
 import Card from './Card'
 import '../client/scss/layout.scss'
 import '../client/scss/libs.css'
@@ -8,11 +8,17 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import repoActions from './actions'
 
-const ReactToastr = require("react-toastr");
+const ReactToastr = require('react-toastr')
 const { ToastContainer } = ReactToastr
 const ToastMessageFactory = React.createFactory(ReactToastr.ToastMessage.animation)
 
 class Header extends React.Component {
+
+  static propTypes = {
+    repos: PropTypes.array.isRequired,
+    repoActions: PropTypes.object.isRequired
+  }
+
   constructor (props) {
     super(props)
 
@@ -36,7 +42,7 @@ class Header extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    this.props.repoActions.addRepo(this.state.repoName).then(() => { 
+    this.props.repoActions.addRepo(this.state.repoName).then(() => {
       this.setState(Object.assign({}, this.state, {repoName: ''}))
     }, (err) => {
       this.refs.container.error(
@@ -63,10 +69,10 @@ class Header extends React.Component {
   renderEmpty () {
     return (
       <div className='empty-state'>
-        <div className='empty-icon'><img src='empty.svg' width='200' /></div>
+        <div className='empty-icon'><img src='public/icons/empty.svg' width='200' /></div>
         <div className='empty-text'>
-          You don't have any repos added, add public repos to get started. 
-          <div> You can upto 5 repositories to stalk.</div> 
+          You don't have any repos added, add public repos to get started.
+          <div> You can upto 5 repositories to stalk.</div>
           <div>Format: `username/repo-name`</div>
         </div>
       </div>
@@ -88,7 +94,7 @@ class Header extends React.Component {
     return (
       <div className='wrapper'>
         <header className='header'>
-          <div className='logo'><img src='logo.svg' width='30' /></div>
+          <div className='logo'><img src='public/icons/logo.svg' width='30' /></div>
           <div className='title'>Git-Stalk</div>
           { Object.keys(this.props.repos).length < 5 && this.renderInput() }
         </header>

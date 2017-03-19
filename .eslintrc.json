@@ -1,8 +1,8 @@
 {
   "extends": ["standard", "standard-react"],
+  "parser": "babel-eslint",
   "rules": {
   	"no-class-assign": "off",
-  	"handle-callback-err
-  	": "off"
+  	"handle-callback-err": "off"
   }
 }

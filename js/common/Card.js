@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {PropTypes} from 'react'
 import Delete from 'react-icons/md/delete'
 import Star from 'react-icons/go/star'
 import Fork from 'react-icons/go/repo-forked'
@@ -8,6 +8,10 @@ import { bindActionCreators } from 'redux'
 import repoActions from './actions'
 
 class Card extends React.Component {
+  static propTypes = {
+    repo: PropTypes.object.isRequired,
+    repoActions: PropTypes.object.isRequired
+  }
 
   constructor (props) {
     super(props)
@@ -48,13 +52,13 @@ class Card extends React.Component {
           No
         </button>
       </div>
-      )
+    )
   }
 
   renderDelete () {
     return (
       <a className='delete-item' onClick={this.showConfirm}><Delete /></a>
-      )
+    )
   }
 
   render () {
@@ -62,7 +66,7 @@ class Card extends React.Component {
       <div className='card'>
         <div className='repo'>
           <div className='repo-name'>
-            <a target="_blank" href={`http://github.com/${this.props.repo.name}`}>{this.props.repo.name}</a>
+            <a target='_blank' href={`http://github.com/${this.props.repo.name}`}>{this.props.repo.name}</a>
           </div>
           <div className='delete-section'>
             { this.state.confirm ? this.renderConfirm() : this.renderDelete() }
@@ -74,7 +78,6 @@ class Card extends React.Component {
           <div className='info-item issues'><Issues /> {this.props.repo.issues}</div>
         </div>
       </div>
-    
     )
   }
 }

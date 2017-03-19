@@ -10,7 +10,7 @@ class App extends React.Component {
       <Provider store={store}>
         <Layout />
       </Provider>
-      )
+    )
   }
 }
 

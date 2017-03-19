@@ -3,9 +3,10 @@
     "react",
     ["es2015", {"modules": false, "loose": true}]
   ],
+  "plugins": ["transform-class-properties"],
   "env": {
     "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "plugins": ["transform-es2015-modules-commonjs", "transform-class-properties"]
     },
     "server": {
       "plugins": ["transform-es2015-modules-commonjs"]
