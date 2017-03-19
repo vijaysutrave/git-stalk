@@ -85,7 +85,7 @@ class Header extends React.Component {
       <div className='repo-add'>
         <form onSubmit={this.handleSubmit} >
           <input type='text' placeholder='Add a repo' className='input' onChange={this.handleOnchange
-          } />
+          } value={this.state.repoName} />
         </form>
       </div>
     )
