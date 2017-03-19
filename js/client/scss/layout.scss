@@ -29,7 +29,7 @@ body {
 	}
 
 	.repo-add {
-        padding: 12px 9px;
+        padding: 8px;
         float: right;
         width: 50%;
         max-width: 250px;
@@ -44,6 +44,7 @@ body {
         color: $colorWhite;
         float: right;
         width: 100%;
+        font-size: 14px;
 
         &:focus,
         &:active {
@@ -71,6 +72,7 @@ body {
         &-text {
             margin: 20px 0;
             color: $colorEmpty;
+            padding: 20px;
         }
 
 

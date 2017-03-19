@@ -36,7 +36,9 @@ class Header extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    this.props.repoActions.addRepo(this.state.repoName).then(null, (err) => {
+    this.props.repoActions.addRepo(this.state.repoName).then(() => { 
+      this.setState(Object.assign({}, this.state, {repoName: ''}))
+    }, (err) => {
       this.refs.container.error(
         'This repo is either private or you misspelt it. Repo format: <github-username>/<repo-name>',
         'Error while adding repo', {
@@ -62,7 +64,11 @@ class Header extends React.Component {
     return (
       <div className='empty-state'>
         <div className='empty-icon'><img src='empty.svg' width='200' /></div>
-        <div className='empty-text'>You don't have any repos added. Add public repos to get started.</div>
+        <div className='empty-text'>
+          You don't have any repos added, add public repos to get started. 
+          <div> You can upto 5 repositories to stalk.</div> 
+          <div>Format: `username/repo-name`</div>
+        </div>
       </div>
     )
   }

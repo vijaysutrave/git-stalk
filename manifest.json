@@ -1,6 +1,7 @@
 {
   "short_name": "Git-Stalk",
-  "name": "Stalk developer repositories on Github",
+  "name": "Git-Stalk",
+  "description": "Stalk developer repositories on Github",
   "icons": [
     {
       "src": "launcher-icon-1x.png",

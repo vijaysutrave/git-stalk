@@ -62,7 +62,7 @@ class Card extends React.Component {
       <div className='card'>
         <div className='repo'>
           <div className='repo-name'>
-            <a href={`http://github.com/${this.props.repo.name}`}>{this.props.repo.name}</a>
+            <a target="_blank" href={`http://github.com/${this.props.repo.name}`}>{this.props.repo.name}</a>
           </div>
           <div className='delete-section'>
             { this.state.confirm ? this.renderConfirm() : this.renderDelete() }
@@ -74,6 +74,7 @@ class Card extends React.Component {
           <div className='info-item issues'><Issues /> {this.props.repo.issues}</div>
         </div>
       </div>
+    
     )
   }
 }
