@@ -14,16 +14,14 @@
     "type": "git",
     "url": "git+https://github.com/vijaysutrave/git-stalk.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Vijay Sutrave <vijaysutrave01@gmail.com> (http://vijaysutrave.com)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/vijaysutrave/git-stalk/issues"
   },
   "homepage": "https://github.com/vijaysutrave/git-stalk#readme",
   "dependencies": {
     "axios": "^0.15.3",
-    "ejs": "^2.5.2",
-    "express": "4.14.1",
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "react-icons": "^2.2.3",
@@ -58,7 +56,6 @@
     "eslint-plugin-react": "6.3.0",
     "eslint-plugin-standard": "2.0.0",
     "extract-text-webpack-plugin": "^2.1.0",
-    "jest": "15.1.1",
     "jsdom": "9.5.0",
     "json-loader": "0.5.4",
     "node-sass": "^3.8.0",

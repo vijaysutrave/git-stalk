@@ -45,6 +45,9 @@ body {
         float: right;
         width: 100%;
         font-size: 14px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
 
         &:focus,
         &:active {
@@ -87,10 +90,9 @@ body {
     overflow: auto;
     position: relative;
 
-    /*svg {
-    	position: relative;
-    	top: -1px;
-    }*/
+    svg {
+        margin-bottom: 1px;
+    }
 
     .repo {
     	overflow: auto;
@@ -125,10 +127,6 @@ body {
     }
 
     .delete-section {
-        position: absolute;
-        right: 0;
-        width: 100%;
-
         .delete-item {
             float: right;
             cursor: pointer;
@@ -137,6 +135,8 @@ body {
         .confirm-group {
             background: white;
             text-align: right;
+            width: 100%;
+            position: absolute;
         }
     }
 

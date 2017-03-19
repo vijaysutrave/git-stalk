@@ -73,7 +73,7 @@ class Header extends React.Component {
         <div className='empty-icon'><img src='public/icons/empty.svg' width='200' /></div>
         <div className='empty-text'>
           You don't have any repos added, add public repos to get started.
-          <div> You can upto 5 repositories to stalk.</div>
+          <div> You can add upto 5 repositories to stalk.</div>
           <div>Format: `username/repo-name`</div>
         </div>
       </div>
