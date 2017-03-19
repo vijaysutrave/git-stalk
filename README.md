@@ -15,7 +15,7 @@ Git-Stalk is tested with [Lighthouse](https://github.com/GoogleChrome/lighthouse
 It uses Service Workers for a offline-first experience and is built with React / Redux. 
 
 ## Screenshots
-<img src="http://vijaysutrave.com/git-stalk1.jpeg" height="300" width="auto" style="margin-right: 30px; display: inline-block;"/>&nbsp;&nbsp;<img src="http://vijaysutrave.com/git-stalk2.jpeg" height="300" width="auto" />
+<img src="http://vijaysutrave.com/git-stalk1.jpeg" height="300" width="auto" style="margin-right: 30px; display: inline-block;"/>&nbsp;&nbsp;<img src="http://vijaysutrave.com/git-stalk3.jpeg" height="300" width="auto" />&nbsp;&nbsp;<img src="http://vijaysutrave.com/git-stalk2.jpeg" height="300" width="auto" />
 </div>
 
 ## Like it?
