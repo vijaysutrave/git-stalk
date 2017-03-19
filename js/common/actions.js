@@ -32,6 +32,7 @@ const actions = {
       })
     }
   },
+  /* Fetches the lates data for the exisiting repos */
   updateLatestData: function (repos) {
     return (dispatch) => {
       if (repos) {

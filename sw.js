@@ -5,8 +5,8 @@ var filesToCache = [
 	'index.html',
 	'public/style.css',
 	'public/bundle.js',
-	'empty.svg',
-	'logo.svg'
+	'public/icons/empty.svg',
+	'public/iconslogo.svg'
 ]
 
 self.addEventListener('install', function(e) {

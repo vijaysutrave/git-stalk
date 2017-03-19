@@ -31,6 +31,7 @@ class Header extends React.Component {
   }
 
   componentDidMount () {
+    /* Front End Rate-limiting of 5 mins to remain within the Github API limits */
     const getLastSyncTime = localStorage.getItem('lastSync')
     if (getLastSyncTime && Math.floor(new Date().getTime() / 1000) - getLastSyncTime > 300) {
       this.props.repoActions.updateLatestData(Object.keys(this.props.repos))
