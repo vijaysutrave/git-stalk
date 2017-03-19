@@ -7,7 +7,7 @@
 </p>
 
 ## What is Git-Stalk?
-A [Progressive Web App](https://developers.google.com/web/progressive-web-apps/), to keep a track of Stars, Issues, Forks on any 
+A Mobile-first, [Progressive Web App](https://developers.google.com/web/progressive-web-apps/), to keep a track of Stars, Issues, Forks on any 
 public repository. 
 
 ## Built with
