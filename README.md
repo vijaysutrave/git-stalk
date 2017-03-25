@@ -11,12 +11,18 @@ A Mobile-first, [Progressive Web App](https://developers.google.com/web/progress
 public repository. 
 
 ## Built with
-Git-Stalk is tested with [Lighthouse](https://github.com/GoogleChrome/lighthouse) to make it a [fully progressive web app](http://vijaysutrave.com/git-stalk-results.png).
+Git-Stalk is tested with [Lighthouse](https://github.com/GoogleChrome/lighthouse) to make it a fully progressive web app.
 It uses Service Workers for a offline-first experience and is built with React / Redux. 
 
 ## Screenshots
 <img src="http://vijaysutrave.com/git-stalk1.jpeg" height="300" width="auto" style="margin-right: 30px; display: inline-block;"/>&nbsp;&nbsp;<img src="http://vijaysutrave.com/git-stalk3.jpeg" height="300" width="auto" />&nbsp;&nbsp;<img src="http://vijaysutrave.com/git-stalk2.jpeg" height="300" width="auto" />
 </div>
+
+## Lighthouse results
+<p align="center"> 
+    <img src="http://vijaysutrave.com/git-stalk-results.png">
+</p>
+
 
 ## Like it?
 :star: this repo
